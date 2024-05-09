@@ -27,11 +27,11 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
                 .withHeaders(headers);
         try {
             final String pageContents = this.getPageContents("https://checkip.amazonaws.com");
-<<<<<<< HEAD
+
             String output = String.format("{ \"message\": \"hello world lambda\", \"location\": \"%s\" }", pageContents);
-=======
+
             String output = String.format("{ \"message\": \"hello world\", \"location\": \"%s\" }", pageContents);
->>>>>>> origin/main
+
 
             return response
                     .withStatusCode(200)
